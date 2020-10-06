@@ -7,7 +7,8 @@ namespace Controller;
  */
 class Auth extends Base
 {
-	protected $response;
+	protected 
+		$response;
 	
 	/**
 	 * Init the View

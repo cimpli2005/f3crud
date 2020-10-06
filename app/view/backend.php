@@ -7,7 +7,8 @@ namespace View;
  */
 class Backend extends Base
 {
-	protected $template = 'templates/layout.html';
+	protected 
+		$template = 'templates/layout.html';
 	
 	public function __construct()
 	{
@@ -15,6 +16,8 @@ class Backend extends Base
 		$f3 = \Base::instance();
 		// change UI path to backend layout dir
 		$f3->copy('BACKEND_UI','UI');
+
+		$f3->set('ASSETS.filter.js','combine');
 
 		// save last visited URL
 		if ($f3->exists('SESSION.CurrentPageURL')) {
@@ -38,6 +41,7 @@ class Backend extends Base
 		if ($this->data) {
 			\Base::instance()->mset($this->data);
 		}
+		// render base layout, the rest happens in template
 		return \Template::instance()->render($this->template);
 	}
 }
