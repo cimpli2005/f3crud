@@ -1,16 +1,16 @@
 {
     "5270220ebb01b0.93149557": {
-        "ACTIVE_DB": "JIG",
+        "ACTIVE_DB": "MYSQL",
         "DB_JIG": {
             "dir": "app\/data\/",
             "format": "0"
         },
         "DB_MYSQL": {
-            "user": "fatfree",
+            "user": "root",
             "password": "",
             "host": "localhost",
             "port": "3306",
-            "dbname": "fatfree"
+            "dbname": "fabulog"
         },
         "DB_SQLITE": {
             "path": "app\/data\/fblog_sqlite.db"

@@ -12,6 +12,14 @@ if (!empty($preErr)) {
 	die(implode("\n",$preErr));
 }
 
+## DB Setup
+$cfg = Config::instance();
+if ($cfg->ACTIVE_DB)
+    $f3->set('DB', Storage::instance()->get($cfg->ACTIVE_DB));
+else {
+    $f3->error(500,'Sorry, but there is no active DB setup.');
+}
+
 $f3->set('CONFIG', $cfg);
 $f3->set('FLASH', \Flash::instance());
 

@@ -2,19 +2,15 @@
 
 namespace Model;
 
-/**
- * class Base
- */
-class Base extends \DB\Cortex
-{
+class Base extends \DB\Cortex {
+
 	// persistence settings
 	protected $table, $db, $fieldConf;
 
 	/**
 	 * init the model
 	 */
-	public function __construct()
-	{
+	public function __construct() {
 		$f3 = \Base::instance();
 		$this->table = $f3->get('db_table_prefix').$this->table;
 		$this->db = 'DB';
@@ -22,22 +18,19 @@ class Base extends \DB\Cortex
 		// validation & error handler
 		$class = get_called_class(); // PHP 5.3 bug
 		$saveHandler = function(\DB\Cortex $self) use($class) {
-			$valid = TRUE;
-			foreach ($$self->getFieldConfiguration() as $field => $conf) {
+			$valid = true;
+			foreach($self->getFieldConfiguration() as $field=>$conf) {
 				if (isset($conf['type']) && !isset($conf['relType'])) {
 					$val = $self->get($field);
 					$model = strtolower(str_replace('\\','.',$class));
 					// check required fields
-					if ($valid && isset($conf['required'])) {
+					if ($valid && isset($conf['required']))
 						$valid = \Validation::instance()->required($val,$field,'error.'.$model.'.'.$field);
-					}
 					// check unique
-					if ($valid && isset($conf['unique'])) {
+					if ($valid && isset($conf['unique']))
 						$valid = \Validation::instance()->unique($self,$val,$field,'error.'.$model.'.'.$field);
-					}
-					if (!$$valid) {
+					if (!$valid)
 						break;
-					}
 				}
 			}
 			return $valid;
@@ -52,18 +45,18 @@ class Base extends \DB\Cortex
 	 * @param $value
 	 * @return bool
 	 */
-	public function updateProperty($filter, $key, $value)
-	{
+	public function updateProperty($filter, $key, $value) {
 		$this->load($filter);
 		if ($this->dry()) {
-			return FALSE;
+			return false;
 		} else {
 			while (!$this->dry()) {
 				$this->set($key, $value);
 				$this->save();
 				$this->next();
 			}
-			return TRUE;			
+			return true;
 		}
 	}
+
 }
