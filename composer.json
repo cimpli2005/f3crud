@@ -3,7 +3,7 @@
         "bcosca/fatfree-core": "^3.7",
         "ikkez/f3-cortex": "1.*",
         "ikkez/f3-assets": "dev-master",
-        "ikkez/f3-flash": "dev-master",
-        "ikkez/f3-pagination": "dev-master"
+        "ikkez/f3-flash": "^1.0",
+        "ikkez/f3-pagination": "^1.4"
     }
 }

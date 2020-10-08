@@ -7,7 +7,7 @@
         },
         "DB_MYSQL": {
             "user": "root",
-            "password": "",
+            "password": "3sj3rukm4n1s",
             "host": "localhost",
             "port": "3306",
             "dbname": "fabulog"

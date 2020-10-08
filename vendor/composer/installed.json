@@ -111,22 +111,22 @@
     },
     {
         "name": "ikkez/f3-flash",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ikkez/f3-flash.git",
-            "reference": "38b6d142a3a21606466400726429fe3e9c2bd94e"
+            "reference": "3ba9ca1ddc80a54ff17a069c47c23e32d601c5d6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ikkez/f3-flash/zipball/38b6d142a3a21606466400726429fe3e9c2bd94e",
-            "reference": "38b6d142a3a21606466400726429fe3e9c2bd94e",
+            "url": "https://api.github.com/repos/ikkez/f3-flash/zipball/3ba9ca1ddc80a54ff17a069c47c23e32d601c5d6",
+            "reference": "3ba9ca1ddc80a54ff17a069c47c23e32d601c5d6",
             "shasum": ""
         },
-        "time": "2019-12-16T20:32:17+00:00",
+        "time": "2017-12-06T17:50:51+00:00",
         "type": "library",
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "classmap": [
                 "lib/"
@@ -137,7 +137,7 @@
             "GPL-3.0"
         ],
         "description": "Add simple Flash Messages and Flash Keys to PHP Fat-Free Framework",
-        "homepage": "https://github.com/ikkez/f3-flash",
+        "homepage": "https://github.com/ikkez/f3-middleware",
         "keywords": [
             "F3",
             "fatfree",
@@ -147,8 +147,8 @@
     },
     {
         "name": "ikkez/f3-pagination",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "version": "v1.4.4",
+        "version_normalized": "1.4.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ikkez/f3-pagination.git",
@@ -165,7 +165,7 @@
         },
         "time": "2017-12-31T11:49:11+00:00",
         "type": "library",
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "classmap": [
                 "lib/"
